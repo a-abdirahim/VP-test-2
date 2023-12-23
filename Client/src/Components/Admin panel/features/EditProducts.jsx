@@ -14,7 +14,7 @@ const EditProducts = () => {
     const allProducts = products
 
     const handleDelete = (id) => {
-        axios.delete("http://127.0.0.1:3000/api/v1/products/" + id)
+        axios.delete("https://calm-rose-bikini.cyclic.app/api/v1/products/" + id)
             .then(() => {
                 toast.success("product deleted succesfully")
                 setTimeout(() => {
@@ -39,7 +39,7 @@ const EditProducts = () => {
                 return (
                     <div className="product-container" key={product._id}>
                         <div className="product-details">
-                            <img src={`http://127.0.0.1:3000/public/uploads/products/${product.productImage}`} alt="product image" />
+                            <img src={`https://calm-rose-bikini.cyclic.app/public/uploads/products/${product.productImage}`} alt="product image" />
                             <div className="product-info">
                                 <p>{product.name}</p>
                                 <p>{parser(product.description)}</p>

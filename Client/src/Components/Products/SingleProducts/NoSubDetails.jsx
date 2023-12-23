@@ -34,8 +34,6 @@ const NoSubDetails = () => {
     }
 
     const { name: productName, description, productImage } = currentProduct
-    // const imageUrl = `http://127.0.0.1:3000/${productImage}`;
-
     return (
         <>
             <div className="product-details">

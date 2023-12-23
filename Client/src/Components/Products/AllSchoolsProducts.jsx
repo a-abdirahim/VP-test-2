@@ -62,8 +62,6 @@ const AllSchoolsProducts = () => {
                 paginatedProducts.map(obj => {
                     const categoryName = categoryMap[obj.category] || "unKnown Category";
                     const subCategoryName = subCategoryMap[obj.subCategory] || "unKnown Category";
-                    // const imageUrl = `http://127.0.0.1:3000/${obj.productImage}`;
-
                     return (
                         <NavLink
                             key={obj._id}

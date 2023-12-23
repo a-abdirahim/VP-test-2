@@ -44,7 +44,7 @@ export const action = async ({ request }) => {
         name: data.get("name"),
         category: data.get("category"),
     }
-    let url = "http://127.0.0.1:3000/api/v1/products/subCategory/create-sub-category"
+    let url = "https://calm-rose-bikini.cyclic.app/api/v1/products/subCategory/create-sub-category"
     const response = await fetch(url, {
         method: method,
         headers: {

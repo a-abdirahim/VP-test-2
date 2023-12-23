@@ -32,7 +32,7 @@ export const action = async ({ request }) => {
         name: data.get("name"),
     }
 
-    let url = "http://127.0.0.1:3000/api/v1/products/category/create-category"
+    let url = "https://calm-rose-bikini.cyclic.appapi/v1/products/category/create-category"
     const response = await fetch(url, {
         method: method,
         headers: {

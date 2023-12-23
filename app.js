@@ -22,7 +22,7 @@ app.use(
   })
 );
 
-// app.use(cors(), (req, res, next) = {}
+// app.use(cors())
 
 // set http headers
 

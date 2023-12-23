@@ -20,7 +20,7 @@ const ProductsPage = () => {
 export default ProductsPage
 
 export const loader = async () => {
-    const data = await fetch("http://127.0.0.1:3000/api/v1/products")
+    const data = await fetch("https://calm-rose-bikini.cyclic.app/api/v1/products")
     if (!data.ok) {
         throw json({ message: "Could not fetch documents.." })
     } else {

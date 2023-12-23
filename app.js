@@ -33,7 +33,8 @@ app.use("/api/v1/products", productRouter);
 app.use("/api/v1/products/subCategory", subCategoryRouter);
 app.use("/api/v1/products/category", categoryRouter);
 
-app.use(express.static(path.join(__dirname, "./Client/dist")));
+const absolutePath = path.resolve(__dirname, "Client/dist");
+app.use(express.static(absolutePath));
 
 app.use(
   "/public/uploads",

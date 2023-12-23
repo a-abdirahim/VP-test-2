@@ -1,0 +1,51 @@
+@import "../../Styles/variables";
+.categories-container {
+  width: 250px;
+  margin: 0;
+  .categories-wrapper {
+    display: grid;
+    gap: 1rem;
+
+    @media (max-width: 1110px) {
+      display: none;
+    }
+
+    .main-categories,
+    .industry-categories {
+      border: 1px solid #9e9e9e;
+      padding: 0.5rem;
+      li {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        transition: color 300ms ease, padding 300ms ease;
+        cursor: pointer;
+        font-size: 0.875rem;
+        text-transform: capitalize;
+        &:hover {
+          color: $primaryGreenColor;
+          padding-left: 7px;
+        }
+      }
+      .active > li {
+        color: $primaryGreenColor;
+        padding-left: 7px;
+      }
+    }
+    .services {
+      display: flex;
+      align-items: center;
+      transition: color 300ms ease, padding 300ms ease;
+      cursor: pointer;
+      &:hover {
+        color: $primaryGreenColor;
+        padding-left: 7px;
+      }
+      &.active {
+        color: red;
+        color: $primaryGreenColor;
+        padding-left: 7px;
+      }
+    }
+  }
+}

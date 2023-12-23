@@ -1,0 +1,102 @@
+@import "../../Styles/variables";
+
+.all-products-section {
+  margin-bottom: 70px;
+  .all-product-wrapper {
+    height: 100%;
+    .product-wrapper {
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      row-gap: 2rem;
+
+      .all-products-container {
+        background-color: #fff;
+        width: 200px;
+        height: 200px !important;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        transition: all 300ms ease;
+        overflow: hidden;
+
+        &:hover {
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+          img {
+            transform: scale(1.06);
+          }
+          .product-detail {
+            .sub-category {
+              color: $primaryGreenColor;
+            }
+            .view-product {
+              background-color: $primaryAccentGreenColor;
+            }
+          }
+        }
+
+        .product-image {
+          width: 100%;
+          height: 70%;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            transition: transform 300ms ease;
+            background-color: #fff;
+          }
+        }
+
+        .product-detail {
+          padding-top: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+          position: relative;
+          height: calc(100% - 65%);
+          .category {
+            font-size: 0.675rem;
+            color: $textColor;
+            padding-left: 0.5rem;
+            text-transform: capitalize;
+          }
+          .sub-category {
+            padding-left: 0.5rem;
+            font-size: 0.775rem;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 300ms ease;
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      @media (max-width: 900px) {
+        grid-template-columns: repeat(3, 1fr);
+        .all-products-container {
+          margin: 0 auto;
+        }
+      }
+      @media (max-width: 680px) {
+        grid-template-columns: repeat(2, 1fr);
+        .all-products-container {
+          margin: 0 auto;
+        }
+      }
+      @media (max-width: 450px) {
+        grid-template-columns: 1fr;
+        .all-products-container {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

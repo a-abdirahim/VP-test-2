@@ -1,0 +1,120 @@
+@import "../../Styles/variables";
+
+.category-container {
+  margin-top: 8rem;
+
+  h2 {
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: 870px) {
+    margin-top: 2.5rem;
+  }
+
+  .category-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+
+    .category {
+      height: 200px;
+      position: relative;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        filter: brightness(60%);
+      }
+
+      .des {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h3 {
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: #fff;
+        }
+
+        label {
+          padding-top: 0.875rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          color: #fff;
+          transition: padding 300ms ease;
+          cursor: pointer;
+          .cat-icon {
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: transform 300ms ease, all 300ms ease;
+          }
+
+          p {
+            font-size: 1.3rem;
+            transition: all 300ms ease;
+            @media (max-width: 1030px) {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        @media (max-width: 1030px) {
+          h3 {
+            font-size: 1.3rem;
+          }
+          .cat-icon {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      &:hover label {
+        padding-left: 7px;
+      }
+      &:hover .cat-icon,
+      &:hover label > p {
+        color: $primaryGreenColor;
+        fill: $primaryGreenColor;
+      }
+    }
+
+    @media (max-width: 984px) {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 1rem;
+      column-gap: 0.5rem;
+      width: 100%;
+    }
+    @media (max-width: 730px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .other-cat-link {
+    float: right;
+    padding-top: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    transition: all 300ms ease;
+    color: $primaryGreenColor;
+    &:hover {
+      color: $primaryAccentGreenColor;
+    }
+  }
+}

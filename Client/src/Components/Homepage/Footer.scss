@@ -1,0 +1,119 @@
+@import "../../Styles/variables";
+ul {
+  list-style: none;
+}
+
+footer {
+  background-color: #f1f1f1;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 300px;
+  padding: 1rem;
+  .footer-items {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .logo {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      img {
+        width: 70%;
+        height: 100px;
+      }
+      span {
+        font-size: 0.675rem;
+        color: $primaryGreenColor;
+      }
+      p {
+        width: 80%;
+        font-size: 0.875rem;
+        color: $textColor;
+        line-height: 24px;
+        font-size: 0.775rem;
+      }
+    }
+
+    @media (max-width: 802px) {
+      flex-direction: column;
+      gap: 2rem;
+      .logo {
+        width: 100%;
+      }
+    }
+
+    .footer-links {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 1rem;
+
+      @media (max-width: 775px) {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 2rem;
+      }
+      @media (max-width: 470px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+      }
+
+      li {
+        width: 100%;
+        h3 {
+          width: 100%;
+          font-size: 1rem;
+          padding-bottom: 10px;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+          li {
+            font-size: 0.75rem;
+            color: $textColor;
+            cursor: pointer;
+            transition: padding 300ms ease, color 300ms ease;
+
+            a {
+              color: $textColor;
+              &:hover {
+                color: #000;
+              }
+            }
+            &:hover {
+              padding-left: 5px;
+              color: #000;
+            }
+          }
+        }
+      }
+      .socials {
+        ul {
+          li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .social-icon {
+              font-size: 1.1rem;
+              fill: $primaryGreenColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.copyrights {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: 1px solid #b9b9b9;
+  font-size: 0.75rem;
+  color: $textColor;
+}

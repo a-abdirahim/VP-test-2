@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: ["http://127.0.0.1:3000", "https://calm-rose-bikini.cyclic.app/"],
+    origin: ["http://127.0.0.1:3000", "https://calm-rose-bikini.cyclic.app"],
     credentials: true,
     exposedHeaders: ["Content-Range"],
   })
@@ -34,7 +34,7 @@ app.use("/api/v1/products/subCategory", subCategoryRouter);
 app.use("/api/v1/products/category", categoryRouter);
 
 const absolutePath = path.resolve(__dirname, "Client/dist");
-app.use(express.static(absolutePath));
+app.use(express.static(absolutePath, { index: "index.html" }));
 
 app.use(
   "/public/uploads",

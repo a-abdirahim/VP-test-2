@@ -2,12 +2,13 @@ import { lazy, Suspense } from "react"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 import RootLayout from "./pages/RootLayout"
-const HomePage = lazy(() => {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(import("./pages/HomePage")), 1000);
-  });
-})
+// const HomePage = lazy(() => {
+//   return new Promise(resolve => {
+//     setTimeout(() => resolve(import("./pages/HomePage")), 500);
+//   });
+// })
 
+import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 
 const ContactPage = lazy(() => {
